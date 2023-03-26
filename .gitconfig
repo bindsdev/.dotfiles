@@ -1,0 +1,7 @@
+[user]
+	name = bindsdev
+	email = bindsdev@gmail.com
+[core]
+	editor = helix
+[init]
+	defaultBranch = master

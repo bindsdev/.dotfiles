@@ -1,0 +1,23 @@
+theme = "modernnight"
+
+[editor]
+line-number = "relative"
+bufferline = "always"
+true-color = true
+auto-save = true
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+backspace = { r = [":w", ":config-reload"], c = [":config-open"], l = [":buffer-close"], o = [":buffer-close-others"] }
+C-z = ":earlier" # bind CTRL+Z to undo an earlier action
+C-u = ":later" # bind CTRL+U to redo an action
+C-d = ":w" # bind CTRL+D to save 
