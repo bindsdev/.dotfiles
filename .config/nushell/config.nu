@@ -526,7 +526,7 @@ let-env config = {
 
 # Aliases
 alias hx = helix
-alias dotfiles = /usr/bin/git --git-dir=/home/akabinds/.dotfiles --work-tree=/home/akabinds
+alias dotfiles = /usr/bin/git $"--git-dir=($env.HOME)/.dotfiles" $"--work-tree=($env.HOME)"
 
 # Environment Variable Overrides
 let-env EDITOR = (which helix)
