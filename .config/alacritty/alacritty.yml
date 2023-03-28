@@ -18,7 +18,7 @@ window:
   dynamic_padding: true
   dynamic_title: false
   decorations: full
-  decorations_theme_variant: dark
+  decorations_theme_variant: Dark
   title: Alacritty
   opacity: 0.6
   startup_mode: Maximized
