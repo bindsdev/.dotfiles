@@ -5,7 +5,7 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$memory_usage $cmd_duration $time\
+$memory_usage $cmd_duration\
 $line_break\
 $character"""
 
@@ -54,8 +54,3 @@ format = "[$symbol compiler: $name $version]($style)"
 [rust]
 symbol = " "
 format = "[$symbol rustc: $version](bold black)"
-
-[time]
-disabled = false
-style = "bold white"
-format = "[$time]($style)"

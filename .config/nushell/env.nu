@@ -72,6 +72,10 @@ let-env NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
 
+# Environment Variables
+let-env EDITOR  = "/usr/bin/helix"
+let-env BROWSER = "/usr/bin/brave"
+
 # Starship
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu

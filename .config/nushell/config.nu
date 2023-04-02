@@ -528,8 +528,5 @@ let-env config = {
 alias hx = helix
 alias dotfiles = /usr/bin/git $"--git-dir=($env.HOME)/.dotfiles" $"--work-tree=($env.HOME)"
 
-# Environment Variable Overrides
-let-env EDITOR = (which helix)
-
 # Starship
 source ~/.cache/starship/init.nu
