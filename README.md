@@ -21,9 +21,3 @@ You can install the basis needed to emulate by development environment, without 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/bindsdev/.dotfiles/master/base-install.sh | sh
 ```
-
-If you want to install all the other things that I use, run:
-
-```sh
-http get https://raw.githubusercontent.com/bindsdev/.dotfiles/master/personal-install.nu | nu
-```
