@@ -240,8 +240,8 @@ assign [class="Alacritty"] $ws1
 assign [class="GHex"] $ws1
 assign [class="Thunar"] $ws1
 assign [class="Brave"] $ws2
-assign [class="Discord"] $ws2
-assign [class="Spotify"] $ws2
+assign [class="Discord"] $ws3
+assign [class="Spotify"] $ws4
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class="Alacritty"] focus
