@@ -12,4 +12,4 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [push]
-	autoSetupRemote = master
+	autoSetupRemote = true
