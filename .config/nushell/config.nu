@@ -8,7 +8,7 @@ let dark_theme = {
     empty: blue
     # Closures can be used to choose colors for specific values.
     # The value (in this case, a bool) is piped into the closure.
-    bool: { if $in { 'light_cyan' } else { 'light_gray' } }
+    bool: {|in| if $in { 'light_cyan' } else { 'light_gray' } }
     int: white
     filesize: {|e|
       if $e == 0b {
@@ -18,7 +18,7 @@ let dark_theme = {
       } else { 'blue' }
     }
     duration: white
-    date: { (date now) - $in |
+    date: {|in| (date now) - $in |
       if $in < 1hr {
         'red3b'
       } else if $in < 6hr {
@@ -89,7 +89,7 @@ let light_theme = {
     empty: blue
     # Closures can be used to choose colors for specific values.
     # The value (in this case, a bool) is piped into the closure.
-    bool: { if $in { 'dark_cyan' } else { 'dark_gray' } }
+    bool: {|in| if $in { 'dark_cyan' } else { 'dark_gray' } }
     int: dark_gray
     filesize: {|e|
       if $e == 0b {
@@ -99,7 +99,7 @@ let light_theme = {
       } else { 'blue_bold' }
     }
     duration: dark_gray
-  date: { (date now) - $in |
+  date: {|in| (date now) - $in |
     if $in < 1hr {
       'red3b'
     } else if $in < 6hr {
@@ -281,14 +281,14 @@ let-env config = {
   edit_mode: emacs # emacs, vi
   shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
   # true or false to enable or disable the welcome banner at startup
-  show_banner: true
+  show_banner: false
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
   hooks: {
-    pre_prompt: [{
+    pre_prompt: [{||
       null  # replace with source code to run before the prompt is shown
     }]
-    pre_execution: [{
+    pre_execution: [{||
       null  # replace with source code to run before the repl input is run
     }]
     env_change: {
@@ -296,7 +296,7 @@ let-env config = {
         null  # replace with source code to run if the PWD environment is different since the last repl input
       }]
     }
-    display_output: {
+    display_output: {||
       if (term size).columns >= 100 { table -e } else { table }
     }
   }
@@ -521,7 +521,6 @@ let-env config = {
       event: { send: menu name: commands_with_description }
     }
   ],
-  show_banner: false
 }
 
 # Aliases
