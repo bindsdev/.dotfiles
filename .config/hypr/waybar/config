@@ -2,11 +2,7 @@
 	"include": "~/.config/hypr/waybar/modules",
 	"position": "bottom",
 	"height": 30,
-
-	# if you only have one monitor, you can remove this
-	# otherwise, run `hyperctl monitors` and put the monitor you want to display waybar on here.
 	"output": "HDMI-A-2",
-	
 	"modules-left": ["hyprland/workspaces"],
 	"modules-right": ["clock", "backlight", "custom/power"]
 }
