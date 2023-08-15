@@ -46,6 +46,7 @@
 "ui.text.focus" = { fg = "cyan" }
 "ui.virtual.ruler" = { bg = "#2a7787" }
 "ui.virtual.whitespace" = { fg = "foreground" }
+"ui.virtual.inlay-hint" = { fg = "foreground_highlight" }
 "ui.window" = { fg = "black" }
 
 "error" = { fg = "red" }
